@@ -1,0 +1,51 @@
+
+/* Original editorial vectors: a separate, contained layer beside the text. */
+.graphic-defs{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.hero-stamp.horse-seal{width:176px;height:176px;top:-5px;right:0;transform:rotate(8deg);color:var(--ink)}
+.hero-stamp.horse-seal svg{fill:none;stroke:none}
+.cover-ornament{position:absolute;top:5%;left:50%;width:clamp(110px,13vw,190px);height:clamp(176px,21vw,304px);transform:translateX(-50%);color:var(--ink);opacity:.88;pointer-events:none}
+.cover-ornament svg{display:block;width:100%;height:100%;filter:drop-shadow(0 1px 0 var(--bg))}
+.chapter-story{display:grid;grid-template-columns:minmax(0,720px) minmax(150px,210px);gap:clamp(36px,5vw,80px);align-items:center;max-width:1060px;margin-inline:auto}
+.chapter .chapter-story>.text{width:100%;max-width:720px;margin:0}
+.graphic-plate{width:100%;max-width:240px;justify-self:center;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;pointer-events:none;user-select:none;overflow:hidden;padding:12px 0}
+.plate-overline,.plate-folio{font-size:9px;line-height:1.5;letter-spacing:.16em;font-weight:500}
+.plate-label{font-family:var(--font-heading);font-size:24px;line-height:1.15;text-transform:uppercase}
+.plate-folio{border-top:1px solid currentColor;padding-top:8px;min-width:72px}
+.plate-seal{width:100%;aspect-ratio:1;border:1px solid currentColor;border-radius:50%;padding:8px;position:relative;transform:rotate(-9deg)}
+.plate-seal::before{content:'';position:absolute;inset:7px;border:1px dashed currentColor;border-radius:50%}
+.plate-seal svg{display:block;width:86%;height:86%;margin:auto}
+.plate-seal span{display:block;font-size:8px;letter-spacing:.15em;line-height:1;position:absolute;bottom:22px;left:0;right:0}
+.plate-textile{display:grid;grid-template-columns:1.5fr 1fr;gap:8px;padding:10px;background:var(--ink);color:var(--bg);border:5px double var(--bg);outline:1px solid var(--ink);outline-offset:-1px;width:calc(100% - 8px);transform:rotate(3deg)}
+.plate-textile>div{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0}
+.plate-textile svg{display:block;width:100%;height:235px}
+.plate-textile>div+div{border-left:1px solid currentColor;padding-left:7px;gap:14px}
+.plate-textile>div+div svg{height:90px}
+.plate-film{width:92%;border:1px solid currentColor;transform:rotate(-7deg);padding:8px;display:grid;gap:9px;position:relative}
+.film-perforation{display:block;height:10px;background:repeating-linear-gradient(90deg,currentColor 0 8px,transparent 8px 17px)}
+.film-frame{border:1px solid currentColor;padding:8px;aspect-ratio:4/5;display:grid;place-items:center}
+.film-frame svg{width:100%;height:100%;color:var(--bg);--bg:#191918}
+.plate-rhythm{width:100%;position:relative;aspect-ratio:1}
+.plate-rhythm svg{display:block;width:100%;height:100%}
+.landscape-poster{background:var(--ink);color:var(--bg);padding:22px 28px;position:relative;overflow:hidden;margin-bottom:var(--section-gap);--poster-paper:#F2F0E7}
+.poster-running,.poster-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:10px;line-height:1.4;letter-spacing:.1em;font-weight:500}
+.poster-running{border-bottom:1px solid #62615B;padding-bottom:13px}
+.poster-running>span:last-child,.poster-bottom>span:last-child{text-align:right}
+.poster-art{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:center;gap:40px;padding:24px 0}
+.poster-art svg{width:100%;height:230px;--bg:#191918}
+.poster-word{font-family:var(--font-heading);font-weight:500;font-size:clamp(42px,6vw,82px);line-height:.98;letter-spacing:-.02em}
+.poster-bottom{border-top:1px solid #62615B;padding-top:14px}
+.poster-bottom svg{width:38px;height:38px}
+.woven-rule{margin-top:16px;margin-bottom:var(--section-gap);color:var(--ink);pointer-events:none;overflow:hidden;border:1px solid var(--ink);padding:4px}
+.woven-rule svg{width:100%;height:72px;display:block}
+.point.text-only .point-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,320px);gap:48px;align-items:center}
+.point-graphic{justify-self:center;width:100%;max-width:280px;border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;pointer-events:none;overflow:hidden}
+.collection-mark{border:1px solid var(--ink);outline:1px solid var(--ink);outline-offset:5px;width:112px;height:160px;padding:8px;margin:4px}
+.collection-mark svg{display:block;width:100%;height:100%}
+.point-graphic .plate-label{font-size:28px}
+.modern-mark{height:170px;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:center;justify-items:center}
+.modern-mark svg:first-child{display:block;width:100%;height:auto;aspect-ratio:1}
+.modern-mark svg:last-child{display:block;width:100%;max-width:88px;height:144px}
+.graphic-credit{margin-top:20px}
+@media(max-width:1099px){.chapter-story{grid-template-columns:minmax(0,1fr) 160px;gap:32px}.graphic-plate{max-width:160px}.plate-label{font-size:21px}.plate-seal span{bottom:18px;font-size:7px}.plate-textile svg{height:210px}.plate-textile>div+div svg{height:70px}.hero-stamp.horse-seal{width:150px;height:150px;top:10px;right:0}.poster-art{gap:24px}.poster-art svg{height:200px}.point.text-only .point-body{grid-template-columns:minmax(0,1fr) 230px;gap:28px}}
+@media(max-width:767px){.hero-stamp.horse-seal{width:92px;height:92px;left:-30px;right:auto;top:12px}.cover-ornament{width:112px;height:180px;top:8%;left:58%}.chapter-story{display:block}.graphic-plate{width:100%;max-width:260px;margin:34px auto 0;padding:20px;gap:14px;border-block:1px solid var(--line)}.plate-seal{max-width:150px}.plate-seal span{bottom:18px;font-size:7px}.plate-textile{width:160px}.plate-textile svg{height:200px}.plate-textile>div+div svg{height:65px}.plate-film{width:145px}.plate-rhythm{width:160px}.plate-overline,.plate-folio{font-size:9px}.plate-label{font-size:24px}.landscape-poster{padding:18px;margin-bottom:64px}.poster-running,.poster-bottom{font-size:8px;gap:12px;letter-spacing:.04em}.poster-art{grid-template-columns:1fr;gap:0;padding:20px 0}.poster-art svg{height:155px}.poster-word{font-size:48px;line-height:1;display:block;text-align:right;margin-top:10px}.poster-bottom svg{width:26px;height:26px;flex-shrink:0}.woven-rule{padding:3px}.woven-rule svg{height:72px}.point.text-only .point-body{display:block}.point-graphic{max-width:260px;margin:30px auto 0;padding:24px}.point-graphic .plate-label{font-size:25px}}
+@media print{.graphic-plate,.point-graphic{break-inside:avoid}.landscape-poster{background:#191918!important;color:#F2F0E7!important;print-color-adjust:exact}.cover-ornament{display:none}.chapter-story{display:block}.graphic-plate{display:none}.woven-rule{height:24px}.woven-rule svg{height:16px}}
